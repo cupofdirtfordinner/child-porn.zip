@@ -49,6 +49,13 @@
                 filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.5));
             }
 
+            @keyframes appear {
+                0% {opacity: 0; display: none}
+                40% {opacity: 0; display: inline-block}
+                50% {opacity: 1}
+                100% {opacity: 1}
+            }
+
             #also {
                 position: absolute;
                 font-size: .75em;
@@ -56,6 +63,11 @@
                 top: calc(100% - 1.5em);
                 color: rgba(255, 255, 255, 0.6);
                 font-family: "Comic Sans MS", "Comic Sans", cursive;
+                animation: appear 16s ease-in-out 1;
+            }
+
+            #also::after {
+                opacity: 1
             }
 
             a {color: rgba(0, 119, 255, 0.6);}
