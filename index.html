@@ -66,6 +66,14 @@
                 animation: appear 16s ease-in-out 1;
             }
 
+            button {
+                position: absolute;
+                font-size: .75em;
+                color: rgba(255, 255, 255, 0.6);
+                font-family: "Comic Sans MS", "Comic Sans", cursive;
+                background-color: rgba(0, 0, 0, 0)
+            }
+
             #also::after {
                 opacity: 1
             }
@@ -92,8 +100,13 @@
                         divisions += 1
                     }
                 }
-                console.log(time * 20 - divisions * 360 * 20, 359 * 20, time)
+                
             }
+
+            function hide() {
+                document.querySelector('#also').style.display = "none";
+            }
+
             const interval = setInterval(function() {
                 addtime()
             }, 5);
@@ -167,8 +180,7 @@
             <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
             <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
             
-            <div id="also">also check out <a href="https://dirt.cool/penis-world-2">penis world</a>, <a href="https://dirt.cool/penguintime">penguin standard time</a>, and <a href="https://dirt.cool">dirt.cool</a></div>
-
+            <div id="also">also check out <a href="https://dirt.cool/penis-world-2">penis world</a>, <a href="https://dirt.cool/penguintime">penguin standard time</a>, and <a href="https://dirt.cool">dirt.cool</a> | <button onclick="hide()">hide...</button></div>
         </div>
 
     </body>
