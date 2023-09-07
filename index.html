@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <title>PRANKED!</title>
+        <style>
+
+            @import url(https://db.onlinewebfonts.com/c/afc9a2f3e9d1d38a8032a6286af3c440?family=Papyrus+W02);
+
+            #page {
+                position: absolute;
+                background-color: black;
+                width: calc(100vw - 16px);
+                height: calc(100vh - 16px);
+                top: 0px;
+                left: 0px;
+                border-width: 8px;
+                border-color: grey;
+                border-style: solid;
+
+                color: white;
+                perspective: 9000px;
+            }
+
+            @keyframes getpranked {
+                0% {transform: rotatey(-20deg) }
+                100% {transform: rotatey(20deg) }
+            }
+
+            .prank {
+                display: inline-block;
+                position: absolute;
+                font-size: 4em;
+                left: -2.63em;
+                top: -1em;
+                animation: getpranked 4s ease-in-out alternate-reverse infinite;
+                font-family: "Papyrus W02";
+                font-weight: light;
+            }
+
+            .container {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                overflow: visible;
+                left: 50vw;
+                top: 50vh;
+                background-color: blue; 
+                perspective: 500px;
+                color: hsl(100, 100, 50);
+                filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.5));
+            }
+
+            #also {
+                position: absolute;
+                font-size: .75em;
+                left: 8px;
+                top: calc(100% - 1.5em);
+                color: rgba(255, 255, 255, 0.6);
+                font-family: "Comic Sans MS", "Comic Sans", cursive;
+            }
+
+            a {color: rgba(0, 119, 255, 0.6);}
+            .prank span:hover {font-weight: bold;}
+        </style>
+        <script>
+
+            var time = 0;
+            
+            function addtime() {
+                time += .05;
+                shake();
+            }    
+
+            function shake() {
+                var i = 0;
+                var divisions = 0;
+                for (len = document.querySelectorAll('.container').length; i < len; i++) {
+                    document.querySelectorAll('.container')[i].style.transform  = "translatez("+ ( (80 * i) - 3000) +"px) translatey("+ (Math.sin(time + (i / 3)) * 10 ) +"px)"
+                    document.querySelectorAll('.container')[i].style.color = "hsl("+(time - (divisions * 360))+", 100%, 50%)"
+                    if (time * 20 - divisions * 360 * 20 > 359 * 20) {
+                        divisions += 1
+                    }
+                }
+                console.log(time * 20 - divisions * 360 * 20, 359 * 20, time)
+            }
+            const interval = setInterval(function() {
+                addtime()
+            }, 5);
+        </script>
+    </head>
+    <body>
+        <div id="page">
+
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            <div class="container"><span class="prank"><span>P</span><span>R</span><span>A</span><span>N</span><span>K</span><span>E</span><span>D</span>!</span></div>
+            
+            <div id="also">also check out <a href="https://dirt.cool/penis-world-2">penis world</a>, <a href="https://dirt.cool/penguintime">penguin standard time</a>, and <a href="https://dirt.cool">dirt.cool</a></div>
+
+        </div>
+
+    </body>
+</html>
